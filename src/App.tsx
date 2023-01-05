@@ -1,7 +1,7 @@
 import React from 'react';
-import Counter from './Counter';
-import Greetings from './Greetings';
-import MyForm from './MyForm';
+import Counter from './ex/Counter';
+import Greetings from './ex/Greetings';
+import MyForm from './ex/MyForm';
 
 function App() {
   const onClick = (name: string) => console.log(`${name} says hello`);
