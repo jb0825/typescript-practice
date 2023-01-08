@@ -1,7 +1,11 @@
 import React from 'react';
-import Counter from './ex/Counter';
-import Greetings from './ex/Greetings';
-import MyForm from './ex/MyForm';
+import Counter from './practice/Counter';
+import Greetings from './practice/Greetings';
+import MyForm from './practice/MyForm';
+import ReducerSample from './practice/ReducerSample';
+import TodoForm from './todolist/component/TodoForm';
+import TodoList from './todolist/component/TodoList';
+import { TodosContextProvider } from './todolist/contexts/TodosContext';
 
 function App() {
   const onClick = (name: string) => console.log(`${name} says hello`);
@@ -9,9 +13,17 @@ function App() {
 
   return (
     <div className="App">
+      {/*
       <Greetings name="Lala" onClick={onClick}/>
       <Counter />
       <MyForm onSubmit={onSubmit}/>
+      <ReducerSample />
+      */}
+
+      <TodosContextProvider>
+        <TodoForm />
+        <TodoList />
+      </TodosContextProvider>
     </div>
   );
 }
