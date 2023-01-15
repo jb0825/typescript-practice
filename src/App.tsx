@@ -3,8 +3,8 @@ import Greetings from './practice/Greetings';
 import MyForm from './practice/MyForm';
 import ReducerSample from './practice/ReducerSample';
 import { Counter } from './redux/counter/Counter';
-import TodoForm from './todolist/component/TodoForm';
-import TodoList from './todolist/component/TodoList';
+import TodoForm from './redux/todolist/components/TodoForm';
+import TodoList from './redux/todolist/components/TodoList';
 import { TodosContextProvider } from './todolist/contexts/TodosContext';
 
 function App() {
@@ -20,14 +20,19 @@ function App() {
       <ReducerSample />
       */}
 
-      {/*
+      {/* react context with typescript
       <TodosContextProvider>
         <TodoForm />
         <TodoList />
       </TodosContextProvider>
       */}
       
+      {/* redux toolkit with typescript
       <Counter />
+      */}
+
+      <TodoForm />
+      <TodoList />
     </div>
   );
 }
