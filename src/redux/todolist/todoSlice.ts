@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
 // todo type
-interface Todo {
+export interface Todo {
     id: number,
     text: string,
     done: boolean
@@ -26,17 +26,17 @@ export const todoSlice = createSlice({
 
             state.push(todo);
         },
-        remove: (state, action: PayloadAction<number>) => {
-            state = state.filter(todo => todo.id !== action.payload);
-        },
-        toggle: (state, action: PayloadAction<number>) => {
+        remove: (state, action: PayloadAction<number>) => (
+            state.filter(todo => todo.id !== action.payload)
+        ),
+        toggle: (state, action: PayloadAction<number>) => (
             state = state.map(todo => 
                 todo.id === action.payload ? 
                 {...todo, done: !todo.done} : todo
-            );
-        }
+            )
+        )
     }
-})
+});
 
 // export actions, reducers, state
 export const { create, remove, toggle } = todoSlice.actions;

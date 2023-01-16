@@ -10,4 +10,5 @@
   .TodoItem .delete {
     margin-left: 4px;
     cursor: pointer;
+    color: red;
   }
