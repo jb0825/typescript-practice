@@ -2,6 +2,9 @@ import React from 'react';
 import Greetings from './practice/Greetings';
 import MyForm from './practice/MyForm';
 import ReducerSample from './practice/ReducerSample';
+import UseEffectSample from './react-hooks/tsUseEffect';
+import UseMemoSample from './react-hooks/tsUseMemo';
+import UseReducerSample from './react-hooks/tsUseReducer';
 import { Counter } from './redux/counter/Counter';
 import TodoForm from './redux/todolist/components/TodoForm';
 import TodoList from './redux/todolist/components/TodoList';
@@ -28,11 +31,14 @@ function App() {
       */}
       
       {/* redux toolkit with typescript
-      <Counter />
+        <Counter />
+        <TodoForm />
+        <TodoList />
       */}
 
-      <TodoForm />
-      <TodoList />
+      <UseEffectSample />
+      <UseReducerSample />
+      <UseMemoSample />
     </div>
   );
 }
